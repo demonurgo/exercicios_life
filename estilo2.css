@@ -1,0 +1,39 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+table{
+    
+    border-collapse: collapse;
+    width: 1000px;
+}
+
+th {
+    border: 1px red solid;
+}
+
+td{
+    border: 1px red solid;
+}
+
+a{
+    
+    font-weight: 500;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.direita{
+    text-align: right;
+}
+
+#tabela{
+    border: 1px green solid;
+}
+
+#botao{
+    padding-top: 20px;
+    text-align: center;
+}
+

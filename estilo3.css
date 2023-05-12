@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px;
+}
+
+
+#container{
+    width: 100%;
+    border: 1px red solid;
+}
+
+.imagem{
+    border: 1px solid red;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.paragrafo{
+    border: 1px solid red;
+    text-align: center;
+    
+}
+

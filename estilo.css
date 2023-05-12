@@ -1,0 +1,55 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+
+#navegacao{
+    width: 100%;
+    text-align: center;
+    
+}
+
+div{
+    
+}
+
+#area_imagens{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+#area_paragrafo{
+    padding: 10px;
+    text-align: center;
+}
+
+.paragrafo{
+    width: 1300px;
+}
+
+
+
