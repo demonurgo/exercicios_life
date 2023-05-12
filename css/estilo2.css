@@ -3,17 +3,17 @@ body{
 }
 
 table{
-    
+    height: 400px;
     border-collapse: collapse;
     width: 1000px;
 }
 
 th {
-    border: 1px red solid;
+    border: 2px solid;
 }
 
 td{
-    border: 1px red solid;
+    border: 1px solid;
 }
 
 a{
@@ -29,7 +29,7 @@ a{
 }
 
 #tabela{
-    border: 1px green solid;
+
 }
 
 #botao{

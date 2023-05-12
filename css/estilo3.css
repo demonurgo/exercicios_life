@@ -10,6 +10,13 @@ p{
     margin: 0px;
 }
 
+a{
+    font-weight: 500;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
 
 #container{
     width: 100%;
@@ -28,5 +35,10 @@ p{
     border: 1px solid red;
     text-align: center;
     
+}
+
+#botao{
+    padding-top: 20px;
+    text-align: center;
 }
 
