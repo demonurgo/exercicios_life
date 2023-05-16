@@ -1,13 +1,13 @@
 body{
-    margin: 0;
-    padding: 0;
+    padding: 50px;
+
 }
 
 p{
     font-weight: 600;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
-    margin: 0px;
+
 }
 
 a{
@@ -17,28 +17,70 @@ a{
     font-size: 20px;
 }
 
-
-#container{
-    width: 100%;
-    border: 1px red solid;
+img:hover{
+    opacity: 0.7;
 }
 
-.imagem{
-    border: 1px solid red;
-    padding: 0px;
-    margin-bottom: 0px;
-    margin-top: 50px;
+
+
+
+#container{
+    padding-top: 30px;
+    margin:;
+    width: 100%;
+    border: 2px red solid;
+    border-radius: 10px;
+}
+
+
+
+
+.container_imagem{
+    background: rgb(114, 113, 113,0.5);
+    width: 800px;
+    height: 700px;
+    border: 10px blue inset;
+    margin-top:0px;
+    padding-top: 100px;
     text-align: center;
 }
 
+.container_imagem2{
+    width: 800px;
+    height: 700px;
+    border: 10px blue inset;
+    margin-top:0px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+
+
+
 .paragrafo{
-    border: 1px solid red;
+    margin: 25px;
+    border: 5px green dotted;
+    border-radius: 10px;
     text-align: center;
     
 }
 
+.paragrafo2{
+    margin: 25px;
+    border: 5px green dotted;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+
+
+
 #botao{
-    padding-top: 20px;
+    width: 75px;
+    border: 3px solid yellow;
+    margin: 30px;
+    padding: 20px;
     text-align: center;
 }
 
