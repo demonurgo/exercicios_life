@@ -1,16 +1,10 @@
 body{
-    margin: 50px;
-}
-
-#container_header{
-    background: #F5F5DC;
-    padding: 0px 10px 10px 10px;
-    border: 1px red solid;
-    border-radius: 20px;
+    background-color:;
+    margin: ;
 }
 
 h1{
-    margin-top: 20px;
+    margin-top: 1px;
     border: 1px red solid;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
@@ -18,48 +12,60 @@ h1{
 }
 
 
+#container_header{
+    height: 85px;
+    position: relative;
+    background: #F5F5DC;
+    padding: 20px;
+    margin: 10px;
+    border: 1px red;
+    border-radius: 20px;
+}
+
+
    /*///////NAV-BAR////////*/
 
 #navegacao{
     font-family: ;
-    border: 1px solid green;
+    border: 1px  green;
     width: 100%;
     text-align: center;
     
 }
 
 #navegacao a{
+    background-color: aquamarine;
+    padding: 5px 30px;
+    border: 1px red solid;
+    border-radius: 3px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
-    margin: 10px;
+    margin: 15px 20px;
 }
+
+#navegacao a:hover{
+
+    font-size: large;
+    background-color: #F5F5DC;
+    color: green;
+}
+
 
 
    /*///////FIM NAV-BAR////////*/
 
 #container {
     background-color: #FAEBD7;
-
+    margin: 25px 50px;
     padding: 10px;
-    border: px red solid;
+    border: 1px red solid;
     border-radius: 20px;
 }
 
 
-#botao{
-    padding-top: 20px;
-    text-align: center;
-}
-
-button a{
-    
-    font-weight: 500;
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-}
-
 .imagem {
+
+    /*
     border: 1px red solid;
     border-radius: 15px;
     margin: 20px 20px 15px 15px;
@@ -68,7 +74,19 @@ button a{
     display: inline-block;
     text-align: center;
     width: 420px;
+    height: 440px;*/
+    border: 1px red solid;
+    border-radius: 15px;
+    margin: 20px 20px 15px 15px;
+    padding:10px;
+    background-image:url(https://fastly.picsum.photos/id/935/440/420.jpg?hmac=bkmG8SB9-QXMild_yXsFTd_7jZwD5oL1q7C0FrrApTU);
+    display: inline-block;
+    text-align: center;
+    width: 420px;
     height: 440px;
+
+
+
 }
 
 img{
@@ -83,4 +101,43 @@ p{
     border: 1px solid red;
     padding: 0;
     margin:5px;
+}
+
+#botao{
+    text-align: center;
+}
+
+button{
+    /*
+    border: 1px red solid;
+    */
+    height: 40px;
+    width: 120px;
+    position: relative;
+    border: none;
+    transition: .4s ease-in;
+    z-index: 1;
+}
+
+button::before, button::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+
+}
+
+.btn-1:hover{
+    background: #ff96ad;
+    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 200px #ff96ad;
+
+}
+
+
+button a{
+    color: black;
+    border: px red solid;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
 }

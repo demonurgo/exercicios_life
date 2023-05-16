@@ -2,14 +2,73 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+h1{
+    margin-top: 1px;
+    border: 1px red solid;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+
+}
+
+#container_header{
+    height: 85px;
+    position: relative;
+    background: #F5F5DC;
+    padding: 20px;
+    margin: 10px;
+    border: 1px red;
+    border-radius: 20px;
+}
+
+
+   /*///////NAV-BAR////////*/
+
+#navegacao{
+    font-family: ;
+    border: 1px  green;
+    width: 100%;
+    text-align: center;
+    
+}
+
+#navegacao a{
+    background-color: aquamarine;
+    padding: 5px 30px;
+    border: 1px red solid;
+    border-radius: 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    margin: 15px 20px;
+}
+
+#navegacao a:hover{
+
+    font-size: large;
+    background-color: #F5F5DC;
+    color: green;
+}
+
+
+
+   /*///////FIM NAV-BAR////////*/
+
+#tabela{
+    border: 1px red solid;
+    margin: 25px 50px;
+    padding: 25px;
+    background-color: #FAEBD7;
+    border-radius: 20px;
+}
+
 table{
-    height: 400px;
-    border-collapse: separate;
-    width: 1000px;
+    height: 100%;
+    border-collapse: collapse;
+    border-radius:;
+    width: 100%;
 }
 
 th {
-    border: 2px solid;
+    border: 2px solid red;
 }
 
 td{
@@ -17,20 +76,49 @@ td{
     border: 1px solid;
 }
 
-a{
-    
-    font-weight: 500;
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-}
-
 .esquerda{
     text-align: left;
 }
 
+
+
+
 #botao{
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: center;
 }
 
+button{
+    /*
+    border: 1px red solid;
+    */
+    height: 40px;
+    width: 120px;
+    position: relative;
+    border: none;
+    transition: .4s ease-in;
+    z-index: 1;
+}
+
+button::before, button::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+
+}
+
+.btn-1:hover{
+    background: #ff96ad;
+    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 200px #ff96ad;
+
+}
+
+
+button a{
+    color: black;
+    border: px red solid;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}

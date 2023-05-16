@@ -1,7 +1,134 @@
-body{
-    padding: 50px;
+
+#none{
+    display: none;
+}
+
+h1{
+    margin-top: 1px;
+    border: 1px red solid;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
 
 }
+
+hr{
+
+}
+
+#container_header{
+    height: 85px;
+    position: relative;
+    background: #F5F5DC;
+    padding: 20px;
+    margin: 10px;
+    border: 1px red;
+    border-radius: 20px;
+}
+
+
+   /*///////NAV-BAR////////*/
+
+#navegacao{
+    font-family: ;
+    border: 1px  green;
+    width: 100%;
+    text-align: center;
+    
+}
+
+#navegacao a{
+    background-color: aquamarine;
+    padding: 5px 30px;
+    border: 1px red solid;
+    border-radius: 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    margin: 15px 20px;
+}
+
+#navegacao a:hover{
+
+    font-size: large;
+    background-color: #F5F5DC;
+    color: green;
+}
+
+
+
+   /*///////FIM NAV-BAR////////*/
+
+
+/*//////////ANIMAÇÃO/////////*/
+
+.main{
+    width: 100%; height: 100vh;
+    display: flex;
+    justify-content: center; align-items: center;
+}
+
+.box{
+    width: 400px;
+    height: 300px;
+    background-color: rgb(31, 31, 31);
+    position: relative;
+}
+
+.box::before,
+.box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg,#ff0000,#00f0f0,#00ff00,#0000ff,#ff0000,#00f0f0,#00ff00,#0000ff,#f00f0f);
+    width: 100%;
+    height: 100%;
+    transform: scale(1.02);
+    z-index: -1;
+    background-size: 500%;
+    animation: animation 20s linear infinite;
+}
+
+.box::after{
+    filter: blur(20px);
+}
+
+@keyframes animation{
+    0%{background-position: 0 0;}
+    50%{background-position: 300% 0;}
+    100%{background-position: 0 0;}
+}
+
+/*//////////ANIMAÇÃO/////////*/
+
+#container{
+    padding-top: 40px;
+    margin: 25px 50px;
+    border: 2px red solid;
+    border-radius: 20px;
+    background-color: #FAEBD7; 
+}
+
+
+
+
+.container_imagem{
+    display: inline-block;
+    background: rgb(114, 113, 113,0.5);
+    border:;
+    border-radius: 20px;
+    margin: 30px;
+    padding: 30px 30px;
+    text-align: center;
+}
+
+.container_imagem2{
+    display: inline-block;
+    border: 5px blue inset;
+    margin: 30px;
+    padding: 30px 30px;
+    text-align: center;
+}
+
 
 p{
     font-weight: 600;
@@ -10,11 +137,8 @@ p{
 
 }
 
-a{
-    font-weight: 500;
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+img{
+    border-radius: 20px;
 }
 
 img:hover{
@@ -22,43 +146,10 @@ img:hover{
 }
 
 
-
-
-#container{
-    padding-top: 30px;
-    margin:;
-    width: 100%;
-    border: 2px red solid;
-    border-radius: 10px;
-}
-
-
-
-
-.container_imagem{
-    background: rgb(114, 113, 113,0.5);
-    width: 800px;
-    height: 700px;
-    border: 10px blue inset;
-    margin-top:0px;
-    padding-top: 100px;
-    text-align: center;
-}
-
-.container_imagem2{
-    width: 800px;
-    height: 700px;
-    border: 10px blue inset;
-    margin-top:0px;
-    padding-top: 100px;
-    text-align: center;
-}
-
-
-
-
 .paragrafo{
-    margin: 25px;
+    width: 450px;
+    padding: px;
+    margin: px;
     border: 5px green dotted;
     border-radius: 10px;
     text-align: center;
@@ -78,9 +169,42 @@ img:hover{
 
 #botao{
     width: 75px;
-    border: 3px solid yellow;
-    margin: 30px;
-    padding: 20px;
+    border:;
+    padding: 10px;
     text-align: center;
 }
 
+button{
+    /*
+    border: 1px red solid;
+    */
+    height: 40px;
+    width: 120px;
+    position: relative;
+    border: none;
+    transition: .4s ease-in;
+    z-index: 1;
+}
+
+button::before, button::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+
+}
+
+.btn-1:hover{
+    background: #ff96ad;
+    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 200px #ff96ad;
+
+}
+
+
+button a{
+    color: black;
+    border: px red solid;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
