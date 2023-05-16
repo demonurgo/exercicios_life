@@ -11,7 +11,6 @@ body{
 
 h1{
     margin-top: 1px;
-    border: 1px red solid;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 
@@ -27,7 +26,6 @@ hr{
     background: #F5F5DC;
     padding: 20px;
     margin: 10px;
-    border: 1px red;
     border-radius: 20px;
 }
 
@@ -36,7 +34,6 @@ hr{
 
 #navegacao{
     font-family: ;
-    border: 1px  green;
     width: 100%;
     text-align: center;
     
@@ -45,7 +42,6 @@ hr{
 #navegacao a{
     background-color: aquamarine;
     padding: 5px 30px;
-    border: 1px red solid;
     border-radius: 3px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
@@ -54,7 +50,7 @@ hr{
 
 #navegacao a:hover{
 
-    font-size: large;
+    font-size: larger;
     background-color: #F5F5DC;
     color: green;
 }
@@ -63,9 +59,10 @@ hr{
 
    /*///////FIM NAV-BAR////////*/
 #containergeral{
+    min-width: fit-content;
+    min-height: fit-content;
     background-color: #FAEBD7;
     border-radius: 20px;
-    border: 1px red solid;
     padding: 50px;
     margin: 25px 50px;
 }
@@ -89,34 +86,57 @@ a:hover{
 
 #area_principal{
     height: 70vmax;
-    border: 1px solid red ;
+    background-color: rgb(173, 163, 149);
+    border-radius: 20px;
     width: 100%;
+    margin-bottom: 25px;
+}
+
+img{
+    filter: grayscale(1);
+    border-radius: 5px;
+    transition: .4s;
+}
+
+img:hover{
+    filter: grayscale(0);
 }
 
 .imgleft{
     display: inline-block;
-    border: 1px solid green;
+    border-radius: 5px;
     padding: 10px;
     margin-top: 10%;
     margin-left:10%;
+    box-shadow: inset 0 0 0 200px #000000aa;
+    transition: box-shadow .2s;
 
+}
+
+.imgleft:hover{
+    box-shadow: inset 0 0 0 200px #00000000;
 }
 
 .imgright{
     float: right;
     display: inline-block;
-    border: 1px solid green;
+    border-radius: 10px;
     padding: 10px;
     margin-top: 20%;
     margin-right:20%;
+    box-shadow: inset 0 0 0 200px #000000aa;
+    transition: box-shadow .2s;
 
+}
+
+.imgright:hover{
+    box-shadow: inset 0 0 0 200px #00000000;
 }
 
 
    /*///////PARÁGRAFO////////*/
 
 p {
-    border: 1px solid green;
     background-color: #ecd6babe;
     border-radius: 15px;
     margin: 25px;
@@ -126,7 +146,10 @@ p {
 }
 
 #area_paragrafo{
-    border: solid 1px blue;
+
+    border-radius: 20px;
+    background-color: #a39584;
+    margin-top: 25px;
     padding: 10px;
     text-align: center;
 }
