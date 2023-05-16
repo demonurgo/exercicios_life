@@ -90,6 +90,7 @@ button{
     /*
     border: 1px red solid;
     */
+    cursor: pointer;
     height: 40px;
     width: 120px;
     position: relative;
