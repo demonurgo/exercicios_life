@@ -37,11 +37,12 @@ h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     margin: 15px 20px;
+    transition: .2s linear;
 }
 
 #navegacao a:hover{
 
-    font-size: large;
+    font-size: larger;
     background-color: #F5F5DC;
     color: green;
 }

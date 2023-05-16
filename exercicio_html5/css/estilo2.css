@@ -35,11 +35,12 @@ h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     margin: 15px 20px;
+    transition: .2s linear;
 }
 
 #navegacao a:hover{
 
-    font-size: large;
+    font-size: larger;
     background-color: #F5F5DC;
     color: green;
 }
@@ -49,7 +50,6 @@ h1{
    /*///////FIM NAV-BAR////////*/
 
 #tabela{
-    border: 1px red solid;
     margin: 25px 50px;
     padding: 25px;
     background-color: #FAEBD7;
@@ -58,13 +58,15 @@ h1{
 
 table{
     height: 100%;
-    border-collapse: collapse;
+    border-collapse: inherit;
     border-radius:;
     width: 100%;
 }
 
 th {
-    border: 2px solid red;
+    font-size: 80px;
+    border: 4px solid red;
+
 }
 
 td{

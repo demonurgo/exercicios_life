@@ -46,6 +46,7 @@ hr{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     margin: 15px 20px;
+    transition: .2s linear;
 }
 
 #navegacao a:hover{
