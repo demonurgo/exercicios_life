@@ -8,13 +8,108 @@ body {
 /*/ Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
 
-        
+  #home  h1{
+        font-size: 2.5em;
+    }
 
-    
+  #home p{
+        font-size: 1em;
+  }
+
+  .card1 p{
+        font-size: 0.8em;
+
 }
+
+    .card2{
+        padding-top: 40px;
+        font-size: 0.8em;
+
+    }
+
+    .card3{
+        padding-top: 40px;
+        font-size: 0.8em;
+
+
+    }
+
+}
+
+
 
 /*/ Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
+
+    .card2{
+        padding-top: 40px;
+
+    }
+
+    .card3{
+        padding-top: 40px;
+
+    }
+
+        /*TESTIMONIALS*/
+
+        .testimonials{
+
+            text-align: center;
+            padding: 0px 50px 0 50px;
+            position: relative;
+            top:-120px;
+            
+        
+            
+        }
+        
+        .avatar1{
+        
+            position: relative;
+            top: 120px;
+        }
+        
+            
+        .carrosel{
+            background-color: #dc3545;
+            border-radius: 10px;
+            width: 100%;
+            height: 500px;
+            color: aliceblue;
+            text-align: center;
+            align-self: center;
+            font-size: 0.94em;
+        
+        
+        }
+        
+        .carrosel h1{
+        
+            padding-top: 110px;
+            padding-bottom: 0;
+        
+            color: aliceblue;
+            align-self: center;
+            font-size: 2em;
+        
+        
+        }
+        
+        
+        .carrosel p{
+        
+            padding: 10px 50px;
+        
+            color: aliceblue;
+            align-self: center;
+        
+            font-size: 1em;
+        
+        
+        }
+    
+        /*TESTIMONIALS*/
 
 
 
@@ -33,6 +128,77 @@ body {
         
     }
 
+    .card2{
+        padding-top: 40px;
+
+    }
+
+    .card3{
+        padding-top: 40px;
+
+    }
+
+
+    /*TESTIMONIALS*/
+
+    .testimonials{
+
+        text-align: center;
+        padding: 0px 50px 0 50px;
+        position: relative;
+        top:-120px;
+        
+    
+        
+    }
+    
+    .avatar1{
+    
+        position: relative;
+        top: 120px;
+    }
+    
+        
+    .carrosel{
+        background-color: #dc3545;
+        border-radius: 10px;
+        width: 100%;
+        height: 500px;
+        color: aliceblue;
+        text-align: center;
+        align-self: center;
+        font-size: 1.2em;
+    
+    
+    }
+    
+    .carrosel h1{
+    
+        padding-top: 110px;
+        padding-bottom: 0;
+    
+        color: aliceblue;
+        align-self: center;
+        font-size: 2em;
+    
+    
+    }
+    
+    
+    .carrosel p{
+    
+        padding: 10px 50px;
+    
+        color: aliceblue;
+        align-self: center;
+    
+        font-size: 1em;
+    
+    
+    }
+
+    /*TESTIMONIALS*/
+
 }
 
 /*/ Large devices (desktops, 992px and up)*/
@@ -47,6 +213,66 @@ body {
         
     }
 
+        /*TESTIMONIALS*/
+
+        .testimonials{
+
+            text-align: center;
+            padding: 0px 50px 0 50px;
+            position: relative;
+            top:-120px;
+            
+        
+            
+        }
+        
+        .avatar1{
+        
+            position: relative;
+            top: 120px;
+        }
+        
+            
+        .carrosel{
+            background-color: #dc3545;
+            border-radius: 10px;
+            width: 100%;
+            height: 500px;
+            color: aliceblue;
+            text-align: center;
+            align-self: center;
+            font-size: 1.3em;
+        
+        
+        }
+        
+        .carrosel h1{
+        
+            padding-top: 110px;
+            padding-bottom: 0;
+        
+            color: aliceblue;
+            align-self: center;
+            font-size: 2em;
+        
+        
+        }
+        
+        
+        .carrosel p{
+        
+            padding: 10px 100px;
+        
+            color: aliceblue;
+            align-self: center;
+        
+            font-size: 1em;
+        
+        
+        }
+    
+        /*TESTIMONIALS*/
+
 }
 
 /*/ Extra large devices (large desktops, 1200px and up)*/
@@ -55,6 +281,67 @@ body {
     h1{
         font-size: 4em;
     }
+
+            /*TESTIMONIALS*/
+
+            .testimonials{
+
+                text-align: center;
+                padding: 0px 50px 0 50px;
+                position: relative;
+                top:-120px;
+                
+            
+                
+            }
+            
+            .avatar1{
+            
+                position: relative;
+                top: 120px;
+            }
+            
+                
+            .carrosel{
+                background-color: #dc3545;
+                border-radius: 10px;
+                width: 100%;
+                height: 500px;
+                color: aliceblue;
+                text-align: center;
+                align-self: center;
+                font-size: 1.6em;
+            
+            
+            }
+            
+            .carrosel h1{
+            
+                padding-top: 110px;
+                padding-bottom: 0;
+            
+                color: aliceblue;
+                align-self: center;
+                font-size: 2em;
+            
+            
+            }
+            
+            
+            .carrosel p{
+            
+                padding: 10px 150px;
+            
+                color: aliceblue;
+                align-self: center;
+            
+                font-size: 1em;
+            
+            
+            }
+        
+            /*TESTIMONIALS*/
+    
 
 
 }
