@@ -2,6 +2,42 @@ body {
     background-color: #212529;
 }
 
+@font-face {
+    font-family: 'Garamon';
+    src: url(font/FD_Garamon\(d-t\)/FONTS/OTF/Garamondt-Regular.OTF);
+}
+
+.botao-caixa{
+    margin: 0 10px;
+}
+
+.botao{
+    width: 100%;
+    height: 60px;
+    color: #dc3545;
+    font-weight: 400;
+    font-size: 1.5em;
+
+
+}
+
+.img{
+    position: relative;
+    top: 100px;
+
+}
+
+h5 a{
+    text-decoration: none;
+    color: #dc3545;
+}
+
+
+
+.card{
+    border-radius: 10px;
+    border:;
+}
 
 
 
@@ -9,6 +45,7 @@ body {
 @media (max-width: 575.98px) {
 
   #home  h1{
+    
         font-size: 2.5em;
     }
 
@@ -97,8 +134,7 @@ body {
         }
         
         
-        .carrosel p{
-        
+        .carrosel p{ 
             padding: 10px 50px;
         
             color: aliceblue;
@@ -110,8 +146,6 @@ body {
         }
     
         /*TESTIMONIALS*/
-
-
 
 }
 
@@ -173,7 +207,6 @@ body {
     }
     
     .carrosel h1{
-    
         padding-top: 110px;
         padding-bottom: 0;
     
@@ -186,7 +219,6 @@ body {
     
     
     .carrosel p{
-    
         padding: 10px 50px;
     
         color: aliceblue;
@@ -204,7 +236,9 @@ body {
 /*/ Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
-    h1{
+    h1{ 
+        padding: 0;
+        font-weight: bolder;   
         font-size: 3.5em;
     }
 
@@ -260,7 +294,6 @@ body {
         
         
         .carrosel p{
-        
             padding: 10px 100px;
         
             color: aliceblue;
@@ -310,13 +343,12 @@ body {
                 color: aliceblue;
                 text-align: center;
                 align-self: center;
-                font-size: 1.6em;
+                font-size: 1.4em;
             
             
             }
             
-            .carrosel h1{
-            
+            .carrosel h1{ 
                 padding-top: 110px;
                 padding-bottom: 0;
             
@@ -329,7 +361,6 @@ body {
             
             
             .carrosel p{
-            
                 padding: 10px 150px;
             
                 color: aliceblue;
