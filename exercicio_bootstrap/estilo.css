@@ -7,6 +7,10 @@ body {
     src: url(font/FD_Garamon\(d-t\)/FONTS/OTF/Garamondt-Regular.OTF);
 }
 
+.collapse{
+    font-weight: 500;
+}
+
 .botao-caixa{
     margin: 0 10px;
 }
