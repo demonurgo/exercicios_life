@@ -42,6 +42,16 @@ h5 a{
     border-radius: 10px;
 }
 
+.form-signup {
+    margin: 0 auto;
+    max-width: 700px;
+    
+}
+
+.form-control{
+    
+}
+
 
 
 /*/ Extra small devices (portrait phones, less than 576px)*/
@@ -72,6 +82,10 @@ h5 a{
         font-size: 0.8em;
 
 
+    }
+
+    .nome{
+        margin:4px 0;
     }
 
 }
@@ -150,6 +164,10 @@ h5 a{
     
         /*TESTIMONIALS*/
 
+
+        .nome{
+            margin:4px 0;
+        }
 }
 
 /*/ Medium devices (tablets, 768px and up)*/
