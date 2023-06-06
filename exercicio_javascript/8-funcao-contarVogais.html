@@ -8,8 +8,25 @@
 
     <script>
 
-        
+        function contarVogais(texto){
 
+          let contar = 0
+          var vogais = 'aeiouáâãàéèêíìîóòõôúùûAEIOU'
+
+          for(let i = 0; i < texto.length; i++){
+                if(vogais.includes(texto[i])) {
+
+                    contar++
+
+                }
+
+          }
+
+          return contar
+
+        } 
+        
+        console.log(contarVogais('Olá, mundo '))
 
     </script>
 </head>
