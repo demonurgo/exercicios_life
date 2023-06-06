@@ -8,7 +8,7 @@
 
 <script>
 
-    /*
+  /*  
 function calcularPotencia() {
 
     const base = parseFloat(prompt('Digite a base: '))
@@ -23,8 +23,8 @@ function calcularPotencia() {
 
     let resultado = 1;
 
-    for(let i=0; i<expoente; i++){
-        resultado = resultado * base
+    for(let i = 0; i < expoente; i++){
+        resultado *= base
 
 
     }
@@ -37,33 +37,33 @@ const resultado = calcularPotencia()
 
 document.write(resultado) */
 
-    function calcularPotencia() {
 
-        const base = parseFloat(prompt('Digite uma base: '))
-        const expoente = parseInt(prompt('Digite um expoente: '))
+function calcularPotencia() {
 
-        if (isNaN(base) || isNaN(expoente)) {
+    const base = parseFloat(prompt('Digite uma base: '))
+    const expoente = parseInt(prompt('Digite um expoente: '))
 
-            return'Valores inválidos. Digite números válidos'
+    if(isNaN(base) || isNaN(expoente)){
+        return 'Valore inválidos, digite um número válido.'
 
-        }
-
-        let resultado = 1
-
-        for (let i = 0 ; i < expoente ; i++) {
-
-            resultado = resultado * expoente
-
-        }
-
-        return `O resultado da potencia ${base} elevado ${expoente} é: ${resultado}`
-
-        
     }
 
-    const resultado = calcularPotencia()
+    let resultado = 1
 
-    document.write(resultado)
+    for(let i = 0; i < expoente; i++) {
+        resultado = resultado * base
+
+    }
+
+    return `O resultado de ${base} elevado a ${expoente} é: ${resultado}`
+
+
+}
+
+const resultado = calcularPotencia()
+
+document.write(resultado)
+
 
 
 
