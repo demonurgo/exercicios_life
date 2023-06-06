@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função calcularPotencia</title>
+
+<script>
+
+    /*function gerarFibonacci(numero) {
+        const sequencia = [0, 1]
+
+        for (let i = 2; sequencia[i - 1] < numero; i++) {
+            const proximoNumero = sequencia[i - 1] + sequencia[i - 2]
+            sequencia.push(proximoNumero)
+        }
+
+        return sequencia
+    }
+
+    const input = parseInt(prompt('Digite um número: '))
+    const resultado = gerarFibonacci(input)
+
+    document.write(resultado)*/
+
+    function gerarFibonacci(numero) {
+        const sequencia = [0, 1]
+
+        for(let i = 2; sequencia[i-1] < numero; i++){
+            const proximoNumero = sequencia[i-1] + sequencia[i-2]
+            sequencia.push(proximoNumero)
+
+
+
+        }
+
+        return sequencia
+    }
+
+    const input = parseInt(prompt('Digite um número: '))
+    const resultado = gerarFibonacci(input)
+
+    document.write(resultado)
+
+
+
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

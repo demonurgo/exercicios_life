@@ -37,25 +37,24 @@ const resultado = calcularPotencia()
 
 document.write(resultado) */
 
-
 function calcularPotencia() {
-
     const base = parseFloat(prompt('Digite uma base: '))
     const expoente = parseInt(prompt('Digite um expoente: '))
 
     if(isNaN(base) || isNaN(expoente)){
-        return 'Valore inválidos, digite um número válido.'
-
+        return 'digite números válidos'
     }
 
-    let resultado = 1
+    let resultado = 1 //resultado é 1 porque o resultado mais baixo de potencias é 1
 
-    for(let i = 0; i < expoente; i++) {
+    for(let i = 0; i < expoente; i++){
+
         resultado = resultado * base
 
+
     }
 
-    return `O resultado de ${base} elevado a ${expoente} é: ${resultado}`
+    return `O valor de ${base} elevado a ${expoente} é: ${resultado}` 
 
 
 }
