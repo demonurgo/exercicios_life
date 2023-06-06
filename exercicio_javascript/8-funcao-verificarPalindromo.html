@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função verificarPalindromos</title>
+
+    <script>
+
+        function verificarPalindromo(texto) {
+            const textoFormatado = texto.toLowerCase().replace(/[^a-z0-9]/g, '')
+            const textoInvertido = textoFormatado.split('').reverse().join('')
+
+            //toLowerCase formata para as letras ficarem minusculas
+            //replace remove os caracteres específicos
+            // /[^a-z0-9]/g expressão regular pra formatar o texto retirando letras que não sejam de a até z e 0 até 9 e o g significa que a expressão vai ser usada globalmente
+
+            //split divide a string em um array de caracteres
+            //reverse inverte a ordem dos elementos desse array acima
+            //join une os caracteres novamente em uma string invertida
+
+           if(textoFormatado === textoInvertido){
+
+            return 'A palavra que você inseriu é um palíndromo'
+
+           }else{
+
+            return 'A palavra que você inseriu não é um palíndromo'
+           }
+
+        }
+
+        const input = prompt('Digite a palavra')
+        const resultado = verificarPalindromo(input)
+
+        document.write(resultado)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

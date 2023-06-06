@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função fatorial</title>
+
+    <script>
+
+        function calcularFatorial() {
+
+            const numero = parseInt(prompt('Digite um número:'))
+
+            if (isNaN(numero) || numero < 0) {
+                return 'número inválido, digite um número positivo'
+
+            }
+
+            let fatorial = 1;
+
+            for (let i = 2; i <= numero; i++) {
+                fatorial = fatorial * i
+
+        }
+
+        return `O fatorial de ${numero} é ${fatorial}.`
+
+    }
+
+    const resultado = calcularFatorial()
+
+    document.write(resultado)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

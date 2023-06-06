@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função buscarMaiorPalavra</title>
+
+    <script>
+
+        function buscarMaiorPalavra(frase) {
+
+            //split com espaço para dividir a frase em palavras
+            const palavras = frase.split(' ')
+
+            let maiorPalavra = ''
+
+            //percorrer todas as palavras]
+            for (let i = 0; i < palavras.length; i++) {
+
+                const palavraAtual = palavras[i]
+
+                //verifica se a palavra atual é maiorque a maior palavra já vista
+                if (palavraAtual.length > maiorPalavra.length) {
+
+                    maiorPalavra = palavraAtual
+
+                }
+        }
+
+        return maiorPalavra
+
+    }
+
+    const input = prompt('Digite uma frase')
+    const resultado = buscarMaiorPalavra(input)
+
+    document.write(`A maior palavra é ${resultado}`)
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
