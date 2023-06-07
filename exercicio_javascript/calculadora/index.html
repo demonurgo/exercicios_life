@@ -19,6 +19,7 @@
 
 </head>
 <body>
+    <!--
     <div class="container">
         <div class="row">
             <div class="col d-flex justify-content-center">
@@ -27,7 +28,8 @@
                     <input id="resultado" class="bg-black " type="text" placeholder="0" >
 
                     <div class="row">
-                        <button class="clear btn btn-light btn-lg" onclick="calcular('acao','c')">C</button>
+                        <button class="btn btn-light btn-lg" onclick="calcular('acao','c')">C</button>
+                        <button class="btn btn-light btn-lg" onclick="calcular('acao', 'c')">CE</button>
                         <button class="btn  btn-light btn-lg divisao" onclick="calcular('acao','/')">/</button>
                         <button class="btn  btn-light btn-lg multiplicacao" onclick="calcular('acao','*')">X</button>
                     </div>
@@ -55,7 +57,7 @@
 
                     
                     <div class="row" style="margin-top: -70px;">
-                        <button class="btn btn-light btn-lg zero">0</button>
+                        <button class="btn btn-light btn-lg zero" onclick="calcular('valor','0')" >0</button>
                         <button class="btn  btn-light btn-lg" onclick="calcular('acao','.')">,</button>
                     </div>
                     
@@ -66,10 +68,206 @@
 
         </div>
 
+    </div>   -->
+
+    <div class=" bg-black grid-container">
+        <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+        </div>
+        
+        <button data-all-clear class= "">AC</button>
+        <button data-delete class= "">DEL</button>
+        <button data-operator class= "">%</button>
+        <button class="btn operator">/</button>
+        <button data-number value="7" class= "">7</button>
+        <button data-number value="8" class= "">8</button>
+        <button data-number value="9" class= "">9</button>
+        <button data-operator class=" operator">*</button>
+        <button data-number value="4" class= "">4</button>
+        <button data-number value="5" class= "">5</button>
+        <button data-number value="6" class= "">6</button>
+        <button data-operator class=" operator">-</button>
+        <button data-number value="1" class= "">1</button>
+        <button data-number value="2" class= "">2</button>
+        <button data-number value="3" class= "">3</button>
+        <button data-operator class=" operator">+</button>
+        <button data-number value="0" class=" span-two">0</button>
+        <button data-number value="." class= "">,</button>
+        <button data-equals class=" operator">=</button>
+
     </div>
+    </div>
+
     
     
 
-    <script src="calculadora.js"></script>
+    <script>
+
+      const numberButtons = document.querySelectorAll("[data-number]");  
+      const operationButtons = document.querySelectorAll("[data-operator]");  
+      const equalsButton = document.querySelector("[data-equals]"); 
+      const deleteButton = document.querySelector("[data-delete]"); 
+      const allClearButton = document.querySelector("[data-all-clear]");
+      const previousOperandTextElement = document.querySelector("[data-previous-operand]"); 
+      const currentOperandTextElement = document.querySelector("[data-current-operand]");
+      
+      class Calculator {
+        constructor(previousOperandTextElement, currentOperandTextElement) {
+            this.previousOperandTextElement = previousOperandTextElement;
+            this.currentOperandTextElement = currentOperandTextElement;
+            this.clear();
+        }
+
+        formatDisplayNumber(number) {
+            const stringNumber = number.toString();
+
+            const integerDigits = parseFloat (stringNumber.split('.')[0]);
+            const decimalDigits = stringNumber.split('.')[1]
+
+            let integerDisplay;
+
+            if (isNaN (integerDigits)) {
+                integerDisplay = ''
+
+            } else {
+                integerDisplay = integerDigits.toLocaleString('en', {
+                    maximumFractionDigits: 0,
+                });
+            }
+
+            if (decimalDigits != null) {
+                return `${integerDisplay}.${decimalDigits}`
+            } else {
+                return integerDisplay;
+            }
+
+        }
+
+        delete() {
+            this.currentOperand = this.currentOperand.toString().slice(0,-1)
+        }
+
+        calculate() {
+            let result;
+
+            const _previousOperand = parseFloat(this.previousOperand)
+            const _currentOperand = parseFloat(this.currentOperand)
+
+            if (isNaN(_previousOperand) || isNaN(_currentOperand)) return;
+
+            switch (this.operation) {
+                case '+':
+                result = _previousOperand + _currentOperand;
+                break;
+
+                case '-':
+                result = _previousOperand - _currentOperand;
+                break;
+
+                case '/':
+                result = _previousOperand / _currentOperand;
+                break;
+   
+                case '*':
+                result = _previousOperand * _currentOperand;
+                break;
+
+                
+                case '%':
+                result = _previousOperand * ( _currentOperand / 100);
+                break;
+
+                default:
+                return
+                
+               
+
+            }
+
+            this.currentOperand = result
+            this.operation = undefined;
+            this.previousOperand = ""
+        }
+
+        //seleciona os sinais
+        chooseOperation(operation) {
+
+            if(this.currentOperand === "") return;
+
+            if(this.previousOperand !== '') {
+                this.calculate()
+            }
+
+            this.operation = operation;
+
+            this.previousOperand = this.currentOperand
+            this.currentOperand = ""
+
+        }
+
+            //seleciona os números
+            appendNumber(number){
+                if(this.currentOperand.includes('.') && number === '.') return;
+                this.currentOperand = `${this.currentOperand}${number.toString()}`
+
+            }
+                  
+          
+
+          clear() {
+            this.currentOperand = "";
+            this.previousOperand = "";
+            this.operation = undefined;
+          }
+
+          updateDisplay() {
+            this.previousOperandTextElement.innerText = `${this.formatDisplayNumber(this.previousOperand)} ${this.operation || ""} `;
+            this.currentOperandTextElement.innerText = this.formatDisplayNumber(this.currentOperand);
+          }
+      }
+
+      const calculator = new Calculator (
+        previousOperandTextElement, 
+        currentOperandTextElement);
+
+      //BOTÕES NÚMEROS
+        for (const numberButton of numberButtons) {
+            numberButton.addEventListener("click", () => {
+            calculator.appendNumber(numberButton.value);
+            calculator.updateDisplay();
+            
+          })
+        }
+
+        //BOTÕES OPERAÇÕES
+        for (const operationButton of operationButtons) {
+            operationButton.addEventListener("click", () => {
+                calculator.chooseOperation(operationButton.innerText);
+                calculator.updateDisplay();
+            })
+
+        }
+
+        //BOTÃO AC
+      allClearButton.addEventListener("click", () => {
+        calculator.clear();
+        calculator.updateDisplay();
+      }) 
+
+      //BOTÃO IGUAL
+      equalsButton.addEventListener("click", () => {
+        calculator.calculate()
+        calculator.updateDisplay()
+      })
+
+      //BOTÃO DELETE
+      deleteButton.addEventListener("click", () => {
+        calculator.delete();
+        calculator.updateDisplay();
+      })
+
+
+    </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-#calculadora {
+/*#calculadora {
     background-color: grey;
     padding: 20px;
     margin: 40px;
@@ -80,4 +80,72 @@
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
     opacity: 0.7; /* Firefox */
-  }
+    */
+
+
+* {
+    box-sizing: border-box;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+
+}
+
+.grid-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 120px);
+
+}
+
+.grid-container > button {
+    border-radius: 500px;
+    height: 100px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: rgb(24, 24, 24);
+    color: #eee;
+}
+
+.grid-container > .operator {
+    background-color: #f69906;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.grid-container > .output {
+    color: #eee;
+    margin-bottom: 10px;
+    grid-column: 1 / -1;
+    background-color: black; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+
+.grid-container > .output > .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+
+}
+
+.grid-container > .output > .current-operand {
+    color: white;
+    font-size: 2.5rem;
+
+}
+
+

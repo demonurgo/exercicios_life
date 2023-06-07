@@ -1,5 +1,5 @@
 
-
+/*
 function calcular(tipo, valor) { 
 
     if (tipo === 'acao') {
@@ -29,5 +29,9 @@ function calcular(tipo, valor) {
     }
 
 
-}
+} */
+
+
+  
+
     

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função calcularMediaAprovacao</title>
+
+<script>
+
+ function verificarAprovacao(aluno) {
+    const media = aluno.notas.reduce((total, nota) => total + nota) / aluno.notas.length;
+
+    const frequencia = aluno.frequencia
+
+    if (media >= 7 && frequencia >= 75) {
+        return 'Aprovado'
+
+    } else {
+        return 'Reprovado'
+    }
+ }
+
+ //array para armazenar alunos
+
+    const alunos = [];
+
+
+//loop para os dados dos alunos
+ for(let i = 0; i < 3; i++) {
+
+    const nome = prompt(`Digite aqui o nome do aluno ${i + 1}: `)
+    const nota1 = parseFloat(prompt("Digite sua nota da 1ª unidade: "))
+    const nota2 = parseFloat(prompt("Digite sua nota da 2ª unidade: "))
+    const nota3 = parseFloat(prompt("Digite sua nota da 3ª unidade: "))
+    const nota4 = parseFloat(prompt("Digite sua nota da 4ª unidade: "))
+    const frequencia = parseFloat(prompt("Digite a frequencia de (%): "))
+
+    const aluno = {
+
+        nome: nome,
+        notas: [nota1, nota2, nota3, nota4],
+        frequencia: frequencia
+
+    }
+
+    alunos.push(aluno)
+
+} 
+
+//exibir os resultados para cada aluno
+for (const aluno of alunos) {
+    const media = aluno.notas.reduce((total, nota) => total + nota) / aluno.notas.length
+    const situacao = verificarAprovacao(aluno)
+
+    document.write(`Aluno: ${aluno.nome} <br/>`)
+    document.write(`Média: ${media.toFixed(1)} <br/>`)
+    document.write(`Situação: ${situacao} <br/>`)
+    document.write(`<br/> ------------------------------------ <br/>`)
+
+
+}
+
+
+
+
+
+
+   
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
