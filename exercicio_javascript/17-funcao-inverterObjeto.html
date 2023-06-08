@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Função inverterObjeto</title>
+
+    <script>
+
+    /*    function inverterObjeto(objeto) {
+            const novoObjeto = {}
+        
+
+        for (const chave in objeto) {
+            const valor = objeto[chave]
+            novoObjeto[valor] = chave
+        }
+
+        return novoObjeto
+    }
+
+     const pessoa = {
+
+        nome: 'João',
+        idade: 30,
+        cidade: 'São Paulo',
+        cpf: "059.763.414-97"
+
+
+    }
+
+    const pessoa = { nome: 'José', idade: 54, cpf: 05976341497 , cidade: 'São paulo'};
+
+    const objetoInvertido = inverterObjeto(pessoa)
+
+
+    console.log(objetoInvertido) */
+
+    function inverterObjetos(objeto) {
+
+        const novoObjeto = {}
+
+        for ( const chave in objeto) {
+            const valor = objeto[chave]
+            novoObjeto[valor] = chave
+
+        }
+
+        return novoObjeto
+
+    }
+
+    pessoa = { nome: 'José', idade: 35, cpf: "059.763.414-97"}
+
+    const objetoInvertido = inverterObjetos(pessoa)
+
+    console.log(objetoInvertido)
+
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -79,7 +79,7 @@
         <button data-all-clear class= "">AC</button>
         <button data-delete class= "">DEL</button>
         <button data-operator class= "">%</button>
-        <button class="btn operator">/</button>
+        <button data-operator class=" operator">/</button>
         <button data-number value="7" class= "">7</button>
         <button data-number value="8" class= "">8</button>
         <button data-number value="9" class= "">9</button>
@@ -156,6 +156,12 @@
 
             if (isNaN(_previousOperand) || isNaN(_currentOperand)) return;
 
+            if (this.operation === '/' && _currentOperand === 0) {
+                this.currentOperand = 'Error'    
+
+                return;
+            }
+
             switch (this.operation) {
                 case '+':
                 result = _previousOperand + _currentOperand;
@@ -223,7 +229,12 @@
 
           updateDisplay() {
             this.previousOperandTextElement.innerText = `${this.formatDisplayNumber(this.previousOperand)} ${this.operation || ""} `;
+
+            if(this.currentOperand === 'Error'){
+                this.currentOperandTextElement.innerText = this.currentOperand;
+            } else {
             this.currentOperandTextElement.innerText = this.formatDisplayNumber(this.currentOperand);
+            }
           }
       }
 
