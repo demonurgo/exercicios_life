@@ -12,6 +12,9 @@
      <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
+    <!-- Importando jQuery 3.6.0 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/0c6a816720.js" crossorigin="anonymous"></script>
 
@@ -19,6 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="estilo.css">
+
 
 
 </head>
@@ -270,19 +274,35 @@
 
             <div class="form-group mt-2">
               <label class="mb-1" for="Email">Endereço de Email</label>
-              <input  class="form-control" type="email" name="email" placeholder="Endereço de Email">
+              <input  class="form-control" id="emailInput" type="text" placeholder="Endereço de Email">
             </div>
+            <p id="statusMessage" class="mt-3"></p>
+            
 
             <div class="form-group mt-2">
-              <label class="mb-1" for="Nome">Comentários</label>
+              <label class="mb-1" for="senha">Senha</label>
+              <input id="senhaInput" class="form-control" type="password"  placeholder="Digite a senha">
+            </div>
+            <p id="statusMessageSenha" class="mt-3"></p>
+
+            <div class="form-group mt-2">
+              <label class="mb-1" for="senha">Confirme a senha</label>
+              <input id="confirmarSenhaInput"  class="form-control" type="password"  placeholder="Digite a senha novamente">
+            </div>
+            <p id="statusMessageConfirmaSenha" class="mt-3"></p>
+
+            <div class="form-group mt-2">
+              <label class="mb-1" for="comentario">Comentários</label>
               <textarea  class="form-control" name="mensagem" id="" cols="30" rows="5" placeholder="Mande-nos uma mensagem..."></textarea>
             </div>
 
 
-              <button class="text-danger mt-2 col-12 btn btn-lg btn-dark">Enviar</button>
 
+              <button type="submit" onclick="validarFormulario()"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-danger mt-2 col-12 btn btn-lg btn-dark">Enviar</button>
 
           </form>
+
+
 
 
         </div>
@@ -374,7 +394,71 @@
 <!-- Footer -->
 
 
+<script>
 
+  //VALIDAR EMAIL
+  function validarEmail() {
+    var emailInput = document.getElementById("emailInput");
+    var statusMessage = document.getElementById("statusMessage");
+
+    var email = emailInput.value.trim();
+    var emailRegex = /^[^\s@]+@[^\s@]+\.(com(\.br)?)$/;
+
+    if (emailRegex.test(email)) {
+      statusMessage.innerHTML = "E-mail válido";
+      statusMessage.className = "text-info";
+    } else {
+      statusMessage.innerHTML = "E-mail inválido";
+      statusMessage.className = "text-warning";
+    }
+  }
+
+  //VALIDAR SENHA
+  function validarSenha() {
+    var senhaInput = document.getElementById("senhaInput");
+    var confirmarSenhaInput = document.getElementById("confirmarSenhaInput");
+    var statusMessageSenha = document.getElementById("statusMessageSenha");
+    var statusMessageConfirmaSenha = document.getElementById("statusMessageConfirmaSenha");
+
+    var senha = senhaInput.value.trim();
+    var confirmarSenha = confirmarSenhaInput.value.trim();
+
+    if (senha.length < 8) {
+      statusMessageSenha.innerHTML = "A senha precisa ter pelo menos 8 dígitos.";
+      statusMessageSenha.className = "text-warning";
+    } else {
+      statusMessageSenha.innerHTML = "";
+      statusMessageSenha.className = "";
+    }
+
+    if (senha !== confirmarSenha) {
+      statusMessageConfirmaSenha.innerHTML = "As senhas não correspondem.";
+      statusMessageConfirmaSenha.className = "text-warning";
+    } else {
+      statusMessageConfirmaSenha.innerHTML = "";
+      statusMessageConfirmaSenha.className = "";
+
+    }
+  }
+
+  function validarFormulario() {
+    validarEmail();
+    validarSenha();
+
+
+  }
+  
+
+  var emailInput = document.getElementById("emailInput");
+  emailInput.addEventListener("keyup", validarEmail);
+
+  var senhaInput = document.getElementById("senhaInput");
+  var confirmarSenhaInput = document.getElementById("confirmarSenhaInput");
+  senhaInput.addEventListener("keyup", validarSenha);
+  confirmarSenhaInput.addEventListener("keyup", validarSenha);
+
+
+</script>
 
     
 
