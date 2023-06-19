@@ -11,13 +11,18 @@
 
     <?php
 
+
+    // COMENTÁRIO DE UMA LINHA
     echo 'Comando Echo <br>';
 
+    # COMENTÁRIO DE UMA LINHA
     print 'Comando print <br>';
 
     echo print '';
     echo ' <-- quando a funcão print é usada corretamente ela retorna 1';
-     
+
+    /* COMENTÁRIO VÁRIAS LINHAS */
+
 
     ?>
 

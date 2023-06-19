@@ -11,15 +11,25 @@
 
     <?php
 
-    echo 'Comando Echo <br>';
+    //!= não igual
+    //!== não idêntico
 
-    print 'Comando print <br>';
+    if (5 != '5') {
+        echo 'verdadeiro';
+    } else {
+        echo 'Falso<br>';
 
-    echo print '';
-    echo ' <-- quando a funcão print é usada corretamente ela retorna 1';
-     
+    }
+
+    if (5 !== 5) {
+        echo 'verdadeiro';
+    } else {
+        echo 'Falso';
+
+    }
 
     ?>
+
 
 </body>
 
