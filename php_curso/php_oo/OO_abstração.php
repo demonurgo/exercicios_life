@@ -3,9 +3,9 @@
     //modelo
     class Funcionario {
         //atributos
-        public $nome = '(nome)';
-        public $telefone = '(telefone)';
-        public $numFilhos = '(filhos)';
+        public $nome = null;
+        public $telefone = null;
+        public $numFilhos = null;
 
         //metodos
         function resumirCadFunc(){
